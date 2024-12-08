@@ -1,3 +1,4 @@
+import 'package:delivery_app/views/cart_screen/cart_screen.dart';
 import 'package:flutter/material.dart';
 
 class FoodListScreen extends StatelessWidget {
@@ -333,7 +334,12 @@ class FoodListScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => const CartScreen()),
+          );
+        },
         shape: const CircleBorder(),
         backgroundColor: const Color.fromRGBO(243, 123, 45, 1),
         child: const Icon(
